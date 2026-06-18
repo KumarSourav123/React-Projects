@@ -1,16 +1,112 @@
-# React + Vite
+# 🎨 Background Color Changer (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **Background Color Changer** built using **React.js** and **Tailwind CSS**.
 
-Currently, two official plugins are available:
+Users can click different color buttons to instantly change the background color of the page.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- Change background color dynamically
+- Multiple color options
+- Simple and clean UI
+- Responsive design
+- Built with React state management
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+- React.js
+- JavaScript (ES6)
+- Tailwind CSS
+- React Hooks:
+  - `useState`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Preview
+
+The application contains:
+- A full-screen background area
+- A bottom color selection panel
+- Buttons for different colors
+
+Available colors:
+
+- 🔴 Red
+- 🟢 Green
+- 🔵 Blue
+- 🟤 Olive
+- ⚫ Gray
+- 🟡 Yellow
+- 🩷 Pink
+- 🟣 Purple
+- 🟠 Orange
+- ⚪ White
+- ⚫ Black
+
+## 📂 Project Structure
+
+```
+src/
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Move into the project folder:
+
+```bash
+cd color-changer
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## 🧠 How It Works
+
+The project uses React's `useState` hook to store the selected color.
+
+Example:
+
+```javascript
+const [color, setColor] = useState('black')
+```
+
+When a button is clicked, the color state updates:
+
+```javascript
+setColor('red')
+```
+
+The updated value is applied using inline styling:
+
+```javascript
+style={{backgroundColor: color}}
+```
+
+## 📚 Concepts Learned
+
+- React components
+- State management
+- Event handling
+- Dynamic styling
+- Tailwind CSS utility classes
+
+## 👨‍💻 Author
+
+**Kumar Sourav**
