@@ -1,16 +1,160 @@
-# React + Vite
+# 🔐 Password Generator (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **Password Generator** built using **React.js** and **Tailwind CSS**.  
+It allows users to generate secure random passwords with customizable length and options for numbers and special characters.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Generate random passwords
+- Adjust password length using a range slider
+- Include numbers in password
+- Include special characters in password
+- Copy generated password to clipboard
+- Automatically regenerates password when options change
+- Responsive UI using Tailwind CSS
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- JavaScript (ES6)
+- Tailwind CSS
+- React Hooks:
+  - `useState`
+  - `useEffect`
+  - `useCallback`
+  - `useRef`
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Password generator interface with:
+- Password display field
+- Copy button
+- Length controller
+- Number and character toggles
+
+## 📂 Project Structure
+
+```
+src/
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Go to the project folder:
+
+```bash
+cd password-generator
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the project:
+
+```bash
+npm run dev
+```
+
+## 🧠 How It Works
+
+### Password Generation
+
+The password generator starts with:
+
+```javascript
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+```
+
+If numbers are enabled:
+
+```javascript
+0123456789
+```
+
+are added.
+
+If characters are enabled:
+
+```javascript
+!@#$%^&*()_+-={}[]|;"<>,.?/~
+```
+
+are added.
+
+Then a random character is selected until the password reaches the selected length.
+
+## 🔑 React Hooks Used
+
+### useState
+
+Used to manage:
+
+- Password length
+- Number option
+- Character option
+- Generated password
+
+Example:
+
+```javascript
+const [length, setLength] = useState(8)
+```
+
+---
+
+### useCallback
+
+Used to memoize the password generator function so it does not recreate unnecessarily.
+
+```javascript
+const passwordGenerator = useCallback(()=>{
+   ...
+},[length,numberAllowed,characterAllowed])
+```
+
+---
+
+### useEffect
+
+Automatically generates a new password whenever settings change.
+
+```javascript
+useEffect(()=>{
+ passwordGenerator()
+},[length,numberAllowed,characterAllowed])
+```
+
+---
+
+### useRef
+
+Used to access the password input field directly for copying.
+
+```javascript
+const passwordRef = useRef(null)
+```
+
+## 📋 Copy Feature
+
+The copy button selects the password input and copies it:
+
+```javascript
+window.navigator.clipboard.writeText(password)
+```
+
+## 👨‍💻 Author
+
+**Kumar Sourav**
