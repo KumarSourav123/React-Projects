@@ -1,16 +1,89 @@
-# React + Vite
+# 💱 Currency Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **Currency Converter** built using **React.js**, **Vite**, and **Tailwind CSS**.  
+It uses a currency exchange API to fetch real-time conversion rates.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Convert one currency to another
+- Real-time exchange rate fetching
+- Swap currencies feature
+- Dynamic currency dropdown
+- Responsive UI
+- Built with reusable React components
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- Vite
+- Tailwind CSS
+- JavaScript (ES6+)
+- Currency API
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src
+│
+├── components
+│   └── Card.jsx
+│
+├── hooks
+│   └── useCurrencyInfo.js
+│
+├── App.jsx
+└── main.jsx
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+```
+
+Go inside the project folder:
+
+```bash
+cd 03-currency-converter
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## 🧩 How It Works
+
+- `useCurrencyInfo` custom hook fetches currency data from the API.
+- `Card` component handles:
+  - Amount input
+  - Currency selection
+  - Conversion options
+- `App.jsx` manages:
+  - State management
+  - Conversion logic
+  - Currency swapping
+
+## 📸 Preview
+
+Currency converter interface with real-time conversion.
+
+## 📌 Future Improvements
+
+- Add more currency symbols
+- Add conversion history
+- Add loading animation
+- Add dark mode
+
+## 👨‍💻 Author
+
+Kumar Sourav
